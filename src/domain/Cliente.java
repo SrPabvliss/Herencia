@@ -1,10 +1,10 @@
 package domain;
 
 import java.util.Date;
-
+import java.util.Date;
 public class Cliente extends Persona {
 
-    private java.util.Date date;
+    private Date fechaRegistro;
     private int idCliente;
     private static int contadorCliente;
     private boolean vip;
@@ -13,15 +13,15 @@ public class Cliente extends Persona {
         super(nombre, genero, edad, direccion);
         this.idCliente = ++Cliente.contadorCliente;
         this.vip = vip;
-        this.date = new java.util.Date();
+        this.fechaRegistro = new java.util.Date();
     }
 
     public Date getDate() {
-        return date;
+        return fechaRegistro;
     }
 
     public void setDate(Date date) {
-        this.date = date;
+        this.fechaRegistro = date;
     }
 
     public int getIdCliente() {
@@ -43,7 +43,7 @@ public class Cliente extends Persona {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Cliente{date=").append(date);
+        sb.append("Cliente{date=").append(fechaRegistro);
         sb.append(", idCliente=").append(idCliente);
         sb.append(", vip=").append(vip);
         sb.append(", ").append(super.toString());

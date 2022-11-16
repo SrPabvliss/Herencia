@@ -54,8 +54,18 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", genero=" + genero + ", edad=" + edad + ", direccion=" + direccion + '}';
+        StringBuilder sb = new StringBuilder();
+        sb.append("Persona{nombre=").append(nombre);
+        sb.append(", genero=").append(genero);
+        sb.append(", edad=").append(edad);
+        sb.append(", direccion=").append(direccion);
+        //Para imprimir la referencia en memoria del objeto una vez creado el toString
+        sb.append(", ").append(super.toString());
+        sb.append('}');
+        return sb.toString();
     }
+
+
     
     
 }
